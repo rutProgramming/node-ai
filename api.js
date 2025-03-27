@@ -4,10 +4,14 @@ const cors = require("cors");
 
 const app = express();
 const port = process.env.PORT || 8080; 
+console.log("🔄 Server is starting...");
+console.log("🔑 Checking Replicate API Key:", process.env.REPLICATE_API_KEY ? "Loaded" : "Not Found");
 
 const replicate = new Replicate({
     auth: process.env.REPLICATE_API_KEY,
 });
+
+console.log("✅ Replicate instance created.");
 
 app.use(express.json());
 app.use(cors());
