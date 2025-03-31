@@ -19,8 +19,10 @@ app.use(cors());
 let apiCallCount = 0;
 const maxApiCalls = 100;
 
-app.post("/",async()=>{return "hiii") 
-app.post("/generate-image", async (req, res) => {
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+    app.post("/generate-image", async (req, res) => {
     if (apiCallCount >= maxApiCalls) {
         return res.status(429).json({ error: "API call limit exceeded. Please try again later." });
     }
