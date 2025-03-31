@@ -3,7 +3,7 @@ const Replicate = require("replicate");
 const cors = require("cors");
 
 const app = express();
-const port = process.env.PORT || 8080; 
+const port = process.env.PORT || 3000; 
 console.log("🔄 Server is starting...");
 console.log("🔑 Checking Replicate API Key:", process.env.REPLICATE_API_KEY ? "Loaded" : "Not Found");
 
